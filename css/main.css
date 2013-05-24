@@ -93,26 +93,37 @@ textarea {
    Author's custom styles
    ========================================================================== */
 
-
-#mainpage_flag {
-    width:  100%;
-    height: 550px;
+/* Note: Major reset of ul
+ * 
+ */ 
+ul  {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
 }
 
 
-#mainpage_ocean {
+img#mainpage_flag {
     width:  100%;
-    height: 220px;
+    height: 75%;
 }
 
 
+img#mainpage_ocean {
+    width:  100%;
+    height: 25%;
+}
 
+#main-block  {
+    width: 85%;
+    float: left;
+    height: 810px;
+}
 
-
-
-
-
-
+#help-block  {
+    float: right;
+    width: 15%;
+}
 
 
 
