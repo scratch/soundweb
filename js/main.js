@@ -1,20 +1,15 @@
+/* Sound functionality on hover 
+ * Bug: Currently works on mouse click; unsure of design with hover.
+ * a) How long should user hover before 'song' changes?
+ * b) How to set "theme song" 
+ */
+ 
 var hoverOnFlag = document.getElementById("mainpage_flag");
 var hoverOnOcean = document.getElementById("mainpage_ocean");
 var audioPlayingFlg = 0;
 var audioPlayingID;
 
-// Hide help by default and display only a circular question mark.
-document.getElementById("help-block").style.visibility = "hidden";
-
-var helpBlock = document.getElementById("question-block");
-helpBlock.onclick = function() {
-	if (document.getElementById("help-block").style.visibility == "visible")
-		document.getElementById("help-block").style.visibility = "hidden";
-	else
-		document.getElementById("help-block").style.visibility = "visible";
-}
 // TODO: Pause / play should be a fn, called after simply setting ID.
-
 hoverOnFlag.onclick = function() {// TODO: As the name implies, work on hover, not click
 	var whitePlay = document.getElementById("white_play");
 
@@ -47,3 +42,17 @@ hoverOnOcean.onclick = function() {// TODO: As the name implies, work on hover, 
 
 	audioPlayingID = oceanPlay;
 }
+
+
+// Hide help by default and display only a circular question mark.
+document.getElementById("help-block").style.visibility = "hidden";
+
+var helpBlock = document.getElementById("question-icon");
+helpBlock.onclick = function() {
+	if (document.getElementById("help-block").style.visibility == "visible")
+		document.getElementById("help-block").style.visibility = "hidden";
+	else
+		document.getElementById("help-block").style.visibility = "visible";
+}
+
+
