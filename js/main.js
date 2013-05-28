@@ -4,6 +4,15 @@ var audioPlayingFlg = 0;
 var audioPlayingID;
 
 
+// Hide help by default and display only a circular question mark.
+document.getElementById("help-block").style.visibility = "hidden";
+
+var helpBlock = document.getElementById("question-block");
+helpBlock.onclick = function()  {
+	document.getElementById("help-block").style.visibility = "visible";
+}
+
+
 // TODO: Pause / play should be a fn, called after simply setting ID.
 
 hoverOnFlag.onclick=function()  {   // TODO: As the name implies, work on hover, not click
@@ -38,5 +47,4 @@ hoverOnOcean.onclick=function()  {   // TODO: As the name implies, work on hover
 	}
 	
 	audioPlayingID = oceanPlay;
-	
 }

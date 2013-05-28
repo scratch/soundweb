@@ -93,13 +93,20 @@ textarea {
    Author's custom styles
    ========================================================================== */
 
-/* Note: Major reset of ul
+/* -- nk Note: Major reset of ul
  * 
  */ 
 ul  {
     list-style-type: none;
     margin: 0;
     padding: 0;
+}
+
+
+#main-block  {
+    width: 82%;
+    float: left;
+    height: 810px;
 }
 
 
@@ -110,15 +117,10 @@ img#mainpage_flag {
 }
 
 
+
 img#mainpage_ocean {
     width:  100%;
     height: 25%;
-}
-
-#main-block  {
-    width: 82%;
-    float: left;
-    height: 810px;
 }
 
 #help-block  {
@@ -127,6 +129,10 @@ img#mainpage_ocean {
     background-color: #DDD9D9;
 }
 
+
+#help-block h2 {
+    text-align: center;
+}
 
 #help-block  li {
 	width: 100%;
@@ -148,7 +154,10 @@ img#mainpage_ocean {
 	border: 4px;
 }
 
-
+#question-block {
+    position: fixed;
+    right: 10em;
+}
 
 /* ==========================================================================
    Helper classes
