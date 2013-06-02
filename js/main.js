@@ -27,6 +27,16 @@ hoverOnFlag.onclick = function() {// TODO: As the name implies, work on hover, n
 
 }
 
+
+hoverOnFlag.ondblclick = function()  {
+	var imgElem = document.createElement ("img");
+	imgElem.setAttribute ("id", "aboutus_menu");
+	imgElem.setAttribute ("src", "img/about_indian_ocean2.jpg");
+	imgElem.setAttribute ("alt", "About Us");
+	
+	hoverOnFlag.appendChild (imgElem);
+}
+
 hoverOnOcean.onclick = function() {// TODO: As the name implies, work on hover, not click
 	var oceanPlay = document.getElementById("ocean_play");
 
