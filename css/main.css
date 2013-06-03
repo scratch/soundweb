@@ -104,24 +104,28 @@ ul  {
 
 
 #main-block  {
-    width: 82%;
+    /* width: 82%; */
+    width:  900px;
     float: left;
     height: 810px;
 }
 
 
-
-img#mainpage_flag {
+#mainpage-flag {
     width:  100%;
     height: 75%;
+    background-image: url('img/indianflagimage.jpg');
+    background-repeat: no-repeat;
 }
 
 
 
-img#mainpage_ocean {
+#mainpage-ocean {
     width:  100%;
     height: 25%;
 }
+
+
 
 #help-block  {
     float: right;
