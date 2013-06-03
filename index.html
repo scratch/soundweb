@@ -8,7 +8,7 @@
 	<head>
 		<meta charset="utf-8">
 		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-		<title>web env test with web boilerplate</title>
+		<title>soundweb using Aptana web boilerplate</title>
 		<meta name="description" content="">
 		<meta name="viewport" content="width=device-width">
 
@@ -29,16 +29,18 @@
 		<div id="main-block">
 			<img id="mainpage_flag" src="img/indianflagimage.jpg" alt="Indian Ocean">
 			<audio id="white_play" preload="auto" src="img/lightjazz.ogg">
-				<p>
-					"A little light music"
-				</p>
+				"A little light music"
 			</audio>
 			<img id="mainpage_ocean" src="img/ocean_waves.jpg" alt="Indian Ocean">
-			<audio id="ocean_play" preload="auto" src="img/oceansound.ogg">
-				<p>
+			<div id="ocean_play">
+				<audio preload="auto" src="img/oceansound.ogg">
 					"Gentle ocean sounds"
-				</p>
-			</audio>
+				</audio>
+				<ul class="menu-footer">
+					<li><img src="img/about_indian_ocean2.jpg" alt="left mouse" width="60" height="95"/><a> <strong>left mouse:</strong> for menu </a>
+					</li>;
+               </ul>
+			</div>
 		</div>
 
 		<div  id="help-block">
@@ -51,26 +53,19 @@
 				</li>
 				<li>
 					<img src="img/mouse_right.png" alt="right mouse" width="60" height="95"/>
-					<a>
-						<strong>Right: </strong> Webmaster's cut.
-					</a>
+					<a> <strong>Right: </strong> Webmaster's cut. </a>
 				</li>
 				<li>
 					<img src="img/mouse_middle.png" alt="middle mouse" width="60" height="95"/>
-					<a>
-						<strong>middle:</strong> shut up and be normal.
-					</a>
+					<a> <strong>middle:</strong> shut up and be normal. </a>
 				</li>
 			</ul>
 		</div>
 
-        <div id="question-icon">
-        	<a>
-        	<img src="img/question.jpg" alt="middle mouse" width="20" height="20"/>
-        	</a>
-        </div>
-    
-        
+		<div id="question-icon">
+			<a> <img src="img/question.jpg" alt="middle mouse" width="20" height="20"/> </a>
+		</div>
+
 		<script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
 		<script>
 			window.jQuery || document.write('<script src="js/vendor/jquery-1.9.1.min.js"><\/script>')
