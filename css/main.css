@@ -104,8 +104,7 @@ ul  {
 
 
 #main-block  {
-    /* width: 82%; */
-    width:  900px;
+    width: 82%;
     float: left;
     height: 810px;
 }
@@ -113,9 +112,10 @@ ul  {
 
 #mainpage-flag {
     width:  100%;
-    height: 75%;
-    background-image: url('img/indianflagimage.jpg');
+    min-height: 75%;
+    background-image: url('../img/indianflagimage.jpg');
     background-repeat: no-repeat;
+    background-size: 100%;
 }
 
 
@@ -123,6 +123,9 @@ ul  {
 #mainpage-ocean {
     width:  100%;
     height: 25%;
+    background-image: url('../img/ocean_waves.jpg');
+    background-repeat: no-repeat;
+    background-size: 100%;
 }
 
 
@@ -288,11 +291,12 @@ ul  {
 
 @media print {
     * {
-        background: transparent !important;
+       background: transparent !important;
         color: #000 !important; /* Black prints faster: h5bp.com/s */
         box-shadow: none !important;
         text-shadow: none !important;
     }
+
 
     a,
     a:visited {

@@ -4,14 +4,14 @@
  * b) How to set "theme song" 
  */
  
-var hoverOnFlag = document.getElementById("mainpage_flag");
-var hoverOnOcean = document.getElementById("mainpage_ocean");
+var hoverOnFlag = document.getElementById('mainpage-flag');
+var hoverOnOcean = document.getElementById('mainpage-ocean');
 var audioPlayingFlg = 0;
 var audioPlayingID;
 
 // TODO: Pause / play should be a fn, called after simply setting ID.
 hoverOnFlag.onclick = function() {// TODO: As the name implies, work on hover, not click
-	var whitePlay = document.getElementById("white_play");
+	var whitePlay = document.getElementById('white-play');
 
 	// Bug: If playing a different song and click here, should stop the previous song
 	// and play this song; currently, click is a toggle
@@ -24,23 +24,22 @@ hoverOnFlag.onclick = function() {// TODO: As the name implies, work on hover, n
 	}
 
 	audioPlayingID = whitePlay;
-
 }
 
 
 hoverOnFlag.ondblclick = function()  {
-	var anchorElem = document.createElement ("a");
-	var imgElem = document.createElement ("img");
+	var anchorElem = document.createElement ('a');
+	var imgElem = document.createElement ('img');
 
-	imgElem.setAttribute ("id", "aboutus_menu");
-	imgElem.setAttribute ("src", "img/about_indian_ocean2.jpg");
-	imgElem.setAttribute ("alt", "About Us");
+	imgElem.setAttribute ('id', 'aboutus-menu');
+	imgElem.setAttribute ('src', 'img/about_indian_ocean2.jpg');
+	imgElem.setAttribute ('alt', 'About Us');
 	anchorElem.appendChild(imgElem);	
 	hoverOnFlag.appendChild (anchorElem);
 }
 
 hoverOnOcean.onclick = function() {// TODO: As the name implies, work on hover, not click
-	var oceanPlay = document.getElementById("ocean_play");
+	var oceanPlay = document.getElementById('ocean-play');
 
 	// Bug: If playing a different song and click here, should stop the previous song
 	// and play this song; currently, click is a toggle
@@ -57,14 +56,14 @@ hoverOnOcean.onclick = function() {// TODO: As the name implies, work on hover, 
 
 
 // Hide help by default and display only a circular question mark.
-document.getElementById("help-block").style.visibility = "hidden";
+document.getElementById('help-block').style.visibility = 'hidden';
 
-var helpBlock = document.getElementById("question-icon");
+var helpBlock = document.getElementById('question-icon');
 helpBlock.onclick = function() {
-	if (document.getElementById("help-block").style.visibility == "visible")
-		document.getElementById("help-block").style.visibility = "hidden";
+	if (document.getElementById('help-block').style.visibility == 'visible')
+		document.getElementById('help-block').style.visibility = 'hidden';
 	else
-		document.getElementById("help-block").style.visibility = "visible";
+		document.getElementById('help-block').style.visibility = 'visible';
 }
 
 
