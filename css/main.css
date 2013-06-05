@@ -1,0 +1,20 @@
+
+#row-main {
+    width:  100%;
+    min-height: 500px;
+    background-size: 100%;
+    background-image: url('../img/indianflagimage.jpg');
+    background-repeat: no-repeat;
+}
+
+
+#row-footer {
+    width:  100%;
+    min-height: 399px;
+    background-image: url('../img/ocean_waves.jpg');
+    background-repeat: no-repeat;
+    background-size: 100%;
+}
+
+
+
