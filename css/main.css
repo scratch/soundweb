@@ -166,6 +166,33 @@ ul  {
     right: 10em;
 }
 
+
+.blk-small  {
+    height:  5%;
+    width:   5%
+}
+
+.blk-medium  {
+    height:  10%;
+    width:   10%
+}
+
+.blk-medium2  {
+    height:  12%;
+    width:   12%
+}
+
+.blk-medium3 {
+    height: 18%;
+    width:  18%;
+}
+
+
+.blk-large {
+    height: 35%;
+    width:  35%;
+}
+
 /* ==========================================================================
    Helper classes
    ========================================================================== */

@@ -27,6 +27,7 @@ hoverOnFlag.onclick = function() {// TODO: As the name implies, work on hover, n
 }
 
 
+
 hoverOnFlag.ondblclick = function()  {
 	var anchorElem = document.createElement ('a');
 	var imgElem = document.createElement ('img');
@@ -37,6 +38,8 @@ hoverOnFlag.ondblclick = function()  {
 	anchorElem.appendChild(imgElem);	
 	hoverOnFlag.appendChild (anchorElem);
 }
+
+
 
 hoverOnOcean.onclick = function() {// TODO: As the name implies, work on hover, not click
 	var oceanPlay = document.getElementById('ocean-play');
