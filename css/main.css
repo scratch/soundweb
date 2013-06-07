@@ -1,19 +1,20 @@
+body {
+    height: 720px;
+}
 
 #row-main {
-    width:  100%;
-    min-height: 500px;
-    background-size: 100%;
+    height: 75%;
+/*    background-size: 75%; */
     background-image: url('../img/indianflagimage.jpg');
     background-repeat: no-repeat;
 }
 
 
 #row-footer {
-    width:  100%;
-    min-height: 399px;
+    height: 25%;
     background-image: url('../img/ocean_waves.jpg');
     background-repeat: no-repeat;
-    background-size: 100%;
+/*    background-size: 75%; */
 }
 
 

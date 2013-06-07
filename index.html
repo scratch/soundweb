@@ -1,67 +1,85 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <title>Bootstrap, from Twitter</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="">
-    <meta name="author" content="">
+	<head>
+		<meta charset="utf-8">
+		<title>Soundweb using Bootstrap</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<meta name="description" content="">
+		<meta name="author" content="">
 
-    <!-- Le styles -->
-    <link href="./css/bootstrap.css" rel="stylesheet">
-    <style>
-      body {
-        padding-top: 60px; /* 60px to make the container go all the way to the bottom of the topbar */
-      }
-    </style>
-    <link href="./css/bootstrap-responsive.css" rel="stylesheet">
-    <link href="./css/main.css" rel="stylesheet">
+		<!-- Le styles -->
+		<link href="./css/bootstrap.css" rel="stylesheet">
+		<style>
+            body {
+                padding-top: 60px; /* 60px to make the container go all the way to the bottom of the topbar */
+            }
+		</style>
+		<link href="./css/bootstrap-responsive.css" rel="stylesheet">
+		<link href="./css/main.css" rel="stylesheet">
 
-    <!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
-    <!--[if lt IE 9]>
-      <script src="./js/html5shiv.js"></script>
-    <![endif]-->
+		<!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
+		<!--[if lt IE 9]>
+		<script src="./js/html5shiv.js"></script>
+		<![endif]-->
 
-    <!-- Fav and touch icons -->
-    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="./ico/apple-touch-icon-144-precomposed.png">
-    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="./ico/apple-touch-icon-114-precomposed.png">
-    <link rel="apple-touch-icon-precomposed" sizes="72x72" href="./ico/apple-touch-icon-72-precomposed.png">
-    <link rel="apple-touch-icon-precomposed" href="./ico/apple-touch-icon-57-precomposed.png">
-    <link rel="shortcut icon" href="./ico/favicon.png">
-  </head>
+		<!-- Fav and touch icons -->
+		<link rel="apple-touch-icon-precomposed" sizes="144x144" href="./ico/apple-touch-icon-144-precomposed.png">
+		<link rel="apple-touch-icon-precomposed" sizes="114x114" href="./ico/apple-touch-icon-114-precomposed.png">
+		<link rel="apple-touch-icon-precomposed" sizes="72x72" href="./ico/apple-touch-icon-72-precomposed.png">
+		<link rel="apple-touch-icon-precomposed" href="./ico/apple-touch-icon-57-precomposed.png">
+		<link rel="shortcut icon" href="./ico/favicon.png">
+	</head>
 
-<body>
-  <div id="row-main">
-    <div class="span12">
-      <audio id="white-play" preload="auto" src="img/lightjazz.ogg">
-              "A little light music"
-      </audio>
-    </div>
-  </div>
+	<body>
+		<div class="row-fluid">
+			<div id="row-main" class="span9">
+				<audio id="white-play" preload="auto" src="img/lightjazz.ogg">
+					"A little light music"
+				</audio>
+			</div>
+		</div>
+		<div class="row-fluid">
+			<div id="row-footer" class="span9">
+				<audio id="ocean-play" `preload="auto" src="img/oceansound.ogg">
+					"Gentle ocean sounds"
+				</audio>
+			</div>
+		</div>
 
-  <div id="row-footer">
-    <div class="span12">
-      <audio id="ocean-play" `preload="auto" src="img/oceansound.ogg">
-              "Gentle ocean sounds"
-      </audio>
-    </div>
-  </div>
-  <!-- Le javascript
-  ================================================== -->
-  <!-- Placed at the end of the document so the pages load faster -->
-  <script src="./js/jquery.js"></script>
-  <script src="./js/bootstrap-transition.js"></script>
-  <script src="./js/bootstrap-alert.js"></script>
-  <script src="./js/bootstrap-modal.js"></script>
-  <script src="./js/bootstrap-dropdown.js"></script>
-  <script src="./js/bootstrap-scrollspy.js"></script>
-  <script src="./js/bootstrap-tab.js"></script>
-  <script src="./js/bootstrap-tooltip.js"></script>
-  <script src="./js/bootstrap-popover.js"></script>
-  <script src="./js/bootstrap-button.js"></script>
-  <script src="./js/bootstrap-collapse.js"></script>
-  <script src="./js/bootstrap-carousel.js"></script>
-  <script src="./js/bootstrap-typeahead.js"></script>
-   <script src="./js/main.js"></script>
-</body>
+		<div  class="row-fluid">
+			<div id="help-block" class="span9 offset9">
+				<ul>
+					<li>
+						<img src="img/mouse_left.png" alt="left mouse" width="60" height="95"/>
+						<a> <strong>left mouse:</strong> for menu </a>
+					</li>
+					<li>
+						<img src="img/mouse_right.png" alt="right mouse" width="60" height="95"/>
+						<a> <strong>Right: </strong> Webmaster's cut. </a>
+					</li>
+					<li>
+						<img src="img/mouse_middle.png" alt="middle mouse" width="60" height="95"/>
+						<a> <strong>middle:</strong> shut up and be normal. </a>
+					</li>
+				</ul>
+			</div>
+		</div>
+		<!-- Le javascript
+		================================================== -->
+		<!-- Placed at the end of the document so the pages load faster -->
+		<script src="./js/jquery.js"></script>
+		<script src="./js/bootstrap-transition.js"></script>
+		<script src="./js/bootstrap-alert.js"></script>
+		<script src="./js/bootstrap-modal.js"></script>
+		<script src="./js/bootstrap-dropdown.js"></script>
+		<script src="./js/bootstrap-scrollspy.js"></script>
+		<script src="./js/bootstrap-tab.js"></script>
+		<script src="./js/bootstrap-tooltip.js"></script>
+		<script src="./js/bootstrap-popover.js"></script>
+		<script src="./js/bootstrap-button.js"></script>
+		<script src="./js/bootstrap-collapse.js"></script>
+		<script src="./js/bootstrap-carousel.js"></script>
+		<script src="./js/bootstrap-typeahead.js"></script>
+		<script src="./js/main.js"></script>
+	</body>
 </html>
