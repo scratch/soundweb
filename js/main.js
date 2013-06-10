@@ -4,8 +4,8 @@
  * b) How to set "theme song" 
  */
  
-var hoverOnFlag = document.getElementById('row-main');
-var hoverOnOcean = document.getElementById('row-footer');
+var hoverOnFlag = document.getElementById('io_main-content');
+var hoverOnOcean = document.getElementById('io_footer-block');
 var audioPlayingFlg = 0;
 var audioPlayingID;
 
@@ -59,14 +59,15 @@ hoverOnOcean.onclick = function() {// TODO: As the name implies, work on hover, 
 
 
 // Hide help by default and display only a circular question mark.
-document.getElementById('help-block').style.visibility = 'hidden';
+var helpBlock = document.getElementById('io_help-block');
+helpBlock.style.visibility = 'hidden';
 
-var helpBlock = document.getElementById('question-icon');
-helpBlock.onclick = function() {
-	if (document.getElementById('help-block').style.visibility == 'visible')
-		document.getElementById('help-block').style.visibility = 'hidden';
+var queIcon = document.getElementById('question-icon');
+queIcon.onclick = function() {
+	if (helpBlock.style.visibility == 'visible')
+		helpBlock.style.visibility = 'hidden';
 	else
-		document.getElementById('help-block').style.visibility = 'visible';
+		helpBlock.style.visibility = 'visible';
 }
 
 
