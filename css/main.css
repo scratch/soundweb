@@ -1,6 +1,6 @@
 body {
     height: 720px;
-    position: absolute;
+    padding: 0px;
 }
 
 #io_main-content {
@@ -21,6 +21,13 @@ body {
 
 #io_help-block  {
     background-color: #DDD9D9;
+    margin-top: 10px;
+}
+
+#question-icon  {
+    margin-top: 10px;
+    margin-bootom: 10px;
+}
 }
 
 
