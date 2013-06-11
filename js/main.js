@@ -9,8 +9,8 @@ var hoverOnOcean = document.getElementById('io_footer-block');
 var audioPlayingFlg = 0;
 var audioPlayingID;
 
-// TODO: Pause / play should be a fn, called after simply setting ID.
-hoverOnFlag.onclick = function() {// TODO: As the name implies, work on hover, not click
+function PlayMuse(x,y)
+{
 	var whitePlay = document.getElementById('white-play');
 
 	// Bug: If playing a different song and click here, should stop the previous song
@@ -24,6 +24,23 @@ hoverOnFlag.onclick = function() {// TODO: As the name implies, work on hover, n
 	}
 
 	audioPlayingID = whitePlay;
+}
+
+
+
+/* 
+function GetCoordinates(obj)
+{
+    var posxy = document.addEventListener
+}
+*/
+
+
+
+// TODO: Pause / play should be a fn, called after simply setting ID.
+hoverOnFlag.onclick = function() {// TODO: As the name implies, work on hover, not click
+	// var xy = GetCoordinates();
+	PlayMuse(0,0);
 }
 
 

@@ -28,8 +28,6 @@ body {
     margin-top: 10px;
     margin-bootom: 10px;
 }
-}
-
 
 
 #io_help-block h2 {
@@ -37,9 +35,9 @@ body {
 }
 
 #io_help-block  li {
-/*        width: 100%; */
-        height: 150px;
-        margin-bottom: 20px;
+   height: 150px;
+   text-align: left;
+   margin-bottom: 20px;
 }
 
 

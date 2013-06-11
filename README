@@ -1,0 +1,3 @@
+- user "virtual grid" -- determine (x,y) position and 'play music' 
+  according to the same.
+- Configure the virtual grid using JSON config file.
