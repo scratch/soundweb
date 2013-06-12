@@ -24,7 +24,7 @@ body {
     margin-top: 10px;
 }
 
-#question-icon  {
+#question-icon, #soundoff-icon  {
     margin-top: 10px;
     margin-bootom: 10px;
 }
@@ -41,17 +41,8 @@ body {
 }
 
 
-/*
-#help-block li img  {
-    width: 50%;
+#io_help-block  li.last {
+   height: 140px;
+   text-align: left;
 }
 
-
-
-#help-block li a  {
-        width: 50%;
-        float: right;
-        border-color: red;
-        border: 4px;
-}
-*/

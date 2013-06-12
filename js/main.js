@@ -6,12 +6,12 @@
 
 var hoverOnFlag = document.getElementById('io_main-content');
 var hoverOnOcean = document.getElementById('io_footer-block');
+
 var g_posx = 0, g_posy = 0;
 var audioPlayingID = 0;
 
-
-
-hoverOnFlag.addEventListener('click', GetPos, true);
+document.addEventListener('click', GetPos, true);
+// hoverOnFlag.addEventListener('click', GetPos, true);
 function GetPos(e) {
 	// BUG. Will not work on IE-8.
 	g_posx = e.clientX;
@@ -68,21 +68,19 @@ hoverOnFlag.ondblclick = function() {
 	hoverOnFlag.appendChild(anchorElem);
 }
 
-hoverOnOcean.onclick = function() {// TODO: As the name implies, work on hover, not click
+// TODO: As the name implies, work on hover, not click
+hoverOnOcean.onclick = function() {
 	var oceanPlay = document.getElementById('ocean-play');
-
-	// Bug: If playing a different song and click here, should stop the previous song
-	// and play this song; currently, click is a toggle
-	if (audioPlayingFlg == 0) {
-		oceanPlay.play();
-		audioPlayingFlg = 1;
-	} else {
-		audioPlayingID.pause();
-		audioPlayingFlg = 0;
+   
+    if (audioPlayingID != 0) {
+  		audioPlayingID.pause();
 	}
 
 	audioPlayingID = oceanPlay;
+	audioPlayingID.play();
 }
+
+
 // Hide help by default and display only a circular question mark.
 var helpBlock = document.getElementById('io_help-block');
 helpBlock.style.visibility = 'hidden';
@@ -95,3 +93,8 @@ queIcon.onclick = function() {
 		helpBlock.style.visibility = 'visible';
 }
 
+var soundOffIcon = document.getElementById('soundoff-icon');
+soundOffIcon.onclick = function() {
+    if (audioPlayingID != 0)
+        audioPlayingID.pause();     
+}
