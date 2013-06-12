@@ -1,3 +1,12 @@
 - user "virtual grid" -- determine (x,y) position and 'play music' 
   according to the same.
 - Configure the virtual grid using JSON config file.
+
+TODO: 12th June.
+
+- Get width of each block (main and footer) dynamically and then divide
+  the screen over.
+
+- All menus should have pre-defined width and shape. For ex: the "about
+  us" image should be in a circular 'menu'
+
