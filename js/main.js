@@ -13,72 +13,78 @@ var audioPlayingID = 0;
 document.addEventListener('click', GetPos, true);
 // hoverOnFlag.addEventListener('click', GetPos, true);
 function GetPos(e) {
-	// BUG. Will not work on IE-8.
-	g_posx = e.clientX;
-	g_posy = e.clientY;
+    // BUG: Assume that the click did not happen on the ocean.
+    var xpos = hoverOnFlag.offsetLeft - hoverOnFlag.scrollLeft;
+    var ypos = hoverOnFlag.offsetHeight - hoverOnFlag.scrollTop;
 
-	console.log("position: %d", g_posy);
+    // BUG. Will not work on IE-8.
+    g_posx = e.clientX - xpos;
+    g_posy = e.clientY = ypos;
+    
+    console.log("position: %d", g_posy);
 }
 
 function GetMuseToPlay() {
-	var play;
+    var play;
 
-	if (g_posy < 150)
-		play = document.getElementById('white-play');
-	else if (g_posy >= 150 && g_posy < 300)
-		play = document.getElementById('green-play');
-	else if (g_posy >= 300)
-		play = document.getElementById('orange-play');
-		
-	return play;
+    if (g_posy < 150)
+        play = document.getElementById('white-play');
+    else if (g_posy >= 150 && g_posy < 300)
+        play = document.getElementById('green-play');
+    else if (g_posy >= 300)
+        play = document.getElementById('orange-play');
+
+    return play;
 }
 
+function PlayMuse() {
+    if (audioPlayingID != 0)
+        audioPlayingID.pause();
 
-function PlayMuse() 
-{
-	if (audioPlayingID != 0)
-		audioPlayingID.pause();
-		
-	audioPlayingID = GetMuseToPlay();
+    audioPlayingID = GetMuseToPlay();
 
-	audioPlayingID.play();
+    audioPlayingID.play();
 }
-
-/*
-function GetCoordinates(obj)
-{
-var posxy = document.addEventListener
-}
-*/
 
 // TODO: Pause / play should be a fn, called after simply setting ID.
 hoverOnFlag.onclick = function() {// TODO: As the name implies, work on hover, not click
-	// var xy = GetCoordinates();
-	PlayMuse();
+    // var xy = GetCoordinates();
+    PlayMuse();
 }
+
+
 
 hoverOnFlag.ondblclick = function() {
-	var anchorElem = document.createElement('a');
-	var imgElem = document.createElement('img');
+    if (document.getElementById("aboutus-menu") == null) {
+        var anchorElem = document.createElement('a');
+        var imgElem = document.createElement('img');
 
-	imgElem.setAttribute('id', 'aboutus-menu');
-	imgElem.setAttribute('src', 'img/about_indian_ocean2.jpg');
-	imgElem.setAttribute('alt', 'About Us');
-	anchorElem.appendChild(imgElem);
-	hoverOnFlag.appendChild(anchorElem);
+        imgElem.setAttribute('id', 'aboutus-menu');
+        imgElem.setAttribute('class', 'img-circle');
+        imgElem.setAttribute('src', 'img/about_indian_ocean2.jpg');
+        imgElem.setAttribute('alt', 'About Us');
+        anchorElem.appendChild(imgElem);
+        hoverOnFlag.appendChild(anchorElem);
+        /* getContext returns "undefined function"
+        ctx = hoverOnFlag.getContext('2d');
+        ctx.drawImage ('img/about_indian_ocean2.jpg', g_posx, g_posy);
+        */       
+
+
+    }
 }
-
 // TODO: As the name implies, work on hover, not click
 hoverOnOcean.onclick = function() {
-	var oceanPlay = document.getElementById('ocean-play');
-   
-    if (audioPlayingID != 0) {
-  		audioPlayingID.pause();
-	}
+    var oceanPlay = document.getElementById('ocean-play');
 
-	audioPlayingID = oceanPlay;
-	audioPlayingID.play();
+    if (audioPlayingID != 0) {
+        audioPlayingID.pause();
+    }
+
+    audioPlayingID = oceanPlay;
+    audioPlayingID.play();
 }
+
 
 
 // Hide help by default and display only a circular question mark.
@@ -87,14 +93,17 @@ helpBlock.style.visibility = 'hidden';
 
 var queIcon = document.getElementById('question-icon');
 queIcon.onclick = function() {
-	if (helpBlock.style.visibility == 'visible')
-		helpBlock.style.visibility = 'hidden';
-	else
-		helpBlock.style.visibility = 'visible';
+    if (helpBlock.style.visibility == 'visible')
+        helpBlock.style.visibility = 'hidden';
+    else
+        helpBlock.style.visibility = 'visible';
 }
+
+
 
 var soundOffIcon = document.getElementById('soundoff-icon');
 soundOffIcon.onclick = function() {
     if (audioPlayingID != 0)
-        audioPlayingID.pause();     
+        audioPlayingID.pause();
 }
+
