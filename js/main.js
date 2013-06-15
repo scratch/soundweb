@@ -16,12 +16,12 @@ function GetPos(e) {
     // BUG: Assume that the click did not happen on the ocean.
     var xpos = hoverOnFlag.offsetLeft - hoverOnFlag.scrollLeft;
     var ypos = hoverOnFlag.offsetHeight - hoverOnFlag.scrollTop;
-
+ 
     // BUG. Will not work on IE-8.
-    g_posx = e.clientX - xpos;
-    g_posy = e.clientY = ypos;
-    
-    console.log("position: %d", g_posy);
+    g_posx = e.clientX;
+    g_posy = e.clientY;
+      
+    console.log("position: %d:%d", g_posx, g_posy);
 }
 
 function GetMuseToPlay() {
@@ -55,7 +55,9 @@ hoverOnFlag.onclick = function() {// TODO: As the name implies, work on hover, n
 
 
 hoverOnFlag.ondblclick = function() {
-    if (document.getElementById("aboutus-menu") == null) {
+    var aboutus;
+    
+    if ((aboutus = document.getElementById("aboutus-menu")) == null) {
         var anchorElem = document.createElement('a');
         var imgElem = document.createElement('img');
 
@@ -63,15 +65,17 @@ hoverOnFlag.ondblclick = function() {
         imgElem.setAttribute('class', 'img-circle');
         imgElem.setAttribute('src', 'img/about_indian_ocean2.jpg');
         imgElem.setAttribute('alt', 'About Us');
+        imgElem.style.position = 'absolute';
+        imgElem.style.top = g_posy + "px";
+        imgElem.style.left = g_posx + "px";
+        
         anchorElem.appendChild(imgElem);
         hoverOnFlag.appendChild(anchorElem);
-        /* getContext returns "undefined function"
-        ctx = hoverOnFlag.getContext('2d');
-        ctx.drawImage ('img/about_indian_ocean2.jpg', g_posx, g_posy);
-        */       
-
-
+    } else  {
+        aboutus.style.top = g_posy + "px";
+        aboutus.style.left = g_posx + "px";
     }
+    
 }
 // TODO: As the name implies, work on hover, not click
 hoverOnOcean.onclick = function() {
