@@ -24,6 +24,11 @@ function GetPos(e) {
     console.log("position: %d:%d", g_posx, g_posy);
 }
 
+
+/* GetMuseToPlay -- play muse based on mouse position.
+ * TODO: Need to create a 'grid' of the entire page and based on the 
+ * grid position, song in chosen.
+ */
 function GetMuseToPlay() {
     var play;
 
@@ -47,13 +52,17 @@ function PlayMuse() {
 }
 
 // TODO: Pause / play should be a fn, called after simply setting ID.
-hoverOnFlag.onclick = function() {// TODO: As the name implies, work on hover, not click
+hoverOnFlag.onclick = function() {   // TODO: As the name implies, work on hover, not click
     // var xy = GetCoordinates();
     PlayMuse();
 }
 
 
 
+// Display 'menu' on double-click.
+// TODO: Menu should be a configurable set of items, based on:
+//       (a) current 'page'
+//       (b) previous menu selected.
 hoverOnFlag.ondblclick = function() {
     var aboutus;
     
@@ -77,6 +86,8 @@ hoverOnFlag.ondblclick = function() {
     }
     
 }
+// This is the 'footer' part of the page, hence a different context 
+// playing muse.
 // TODO: As the name implies, work on hover, not click
 hoverOnOcean.onclick = function() {
     var oceanPlay = document.getElementById('ocean-play');
